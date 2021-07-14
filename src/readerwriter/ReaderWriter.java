@@ -1,3 +1,5 @@
+package readerwriter;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -33,6 +35,11 @@ public final class ReaderWriter {
 
     public long nextLong() throws IOException {
         return Long.parseLong(getNewTokenFromLine());
+    }
+
+    public void writeLine(String str) throws IOException {
+        bufferedWriter.write(str);
+        bufferedWriter.flush();
     }
 
     private String getNewTokenFromLine() throws IOException {
